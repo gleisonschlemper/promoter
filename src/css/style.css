@@ -9,7 +9,9 @@
 
         body{
             height: 100vh;
-            overflow: hidden;
+            overflow-y: hidden;
+            object-fit: cover;
+            overflow-x: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
