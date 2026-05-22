@@ -17,19 +17,26 @@ btnEnviar.addEventListener("click", async (e) => {
 
     let nome = document.getElementById("nome").value;
 
-    const { data, error } = await db
-        .from('pessoas')
-        .insert([
-            { nome: nome }
-        ]);
-
-    if (error) {
-        console.log(error);
-        alert("Erro ao salvar");
-    } else {
-        mensagem.innerHTML = `Salvo com sucesso, ${nome}! 🚀`;
-        document.getElementById("nome").value = "";
-        carregarUsuarios();
+    if(nome === "") {
+        alert("Por favor, preencha o nome.");
+        return;
     }
+    else {
+        const { data, error } = await db
+            .from('pessoas')
+            .insert([
+                { nome: nome }
+            ]);
+
+        if (error) {
+            console.log(error);
+            alert("Erro ao salvar");
+        } else {
+            mensagem.innerHTML = `Salvo com sucesso, ${nome}! 🚀`;
+            document.getElementById("nome").value = "";
+            carregarUsuarios();
+        }
+    }
+    
 });
 
