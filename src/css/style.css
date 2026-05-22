@@ -10,7 +10,7 @@
         body{
             height: 100vh;
             overflow-y: hidden;
-            heiaght: 100%;
+            width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
