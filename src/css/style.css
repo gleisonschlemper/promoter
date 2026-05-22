@@ -11,7 +11,7 @@
             height: 100vh;
             overflow-y: hidden;
             object-fit: cover;
-            overflow-x: hidden;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
