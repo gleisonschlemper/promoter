@@ -34,7 +34,6 @@ btnEnviar.addEventListener("click", async (e) => {
         } else {
             mensagem.innerHTML = `Salvo com sucesso, ${nome}! 🚀`;
             document.getElementById("nome").value = "";
-            carregarUsuarios();
         }
     }
     
