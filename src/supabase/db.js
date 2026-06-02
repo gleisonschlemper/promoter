@@ -1,6 +1,6 @@
 const db = window.supabase.createClient(
-    "https://fwfnknwubhizryhysfqn.supabase.co",
-    "sb_publishable_hONN2MOAhkfvR4AlVKQk4A_K3fJNnUi"
+    "https://gqlgpucpeflqhczblbqu.supabase.co",
+    "sb_publishable_9TmWB9JehI6Gihqf5E4kKw_rJHpy7cv"
 );
 
 

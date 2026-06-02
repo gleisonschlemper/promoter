@@ -3,32 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar na lista</title>
-    <link rel="stylesheet" href="src/css/style.css">
+
+    <title>VLG_GS Night Party</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
-<body>
+<body class="text-white min-h-screen">
 
-    <main class="login-box">
-        <h1>Adicionar Usuário</h1>
+    <!-- HEADER -->
+    <header class="glass fixed top-0 left-0 w-full z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
 
-        <section id="formLogin">
-
-            <div class="input-box">
-                <input type="text" id="nome" required>
-                <label>Digite seu nome completo</label>
+            <!-- LOGO -->
+            <div class="text-3xl font-bold">
+                <span class="text-pink-500">vlg</span><span class="text-cyan-400">_gs</span>
             </div>
 
-            <button class="btn">
-                Entrar
+            <!-- MENU DESKTOP -->
+            <nav class="hidden md:block">
+                <ul class="flex gap-8 text-lg">
+                    <li>
+                        <a href="https://chat.whatsapp.com/KlfXQrE0GpT5ZXaL16P5f2?s=cl&p=i&ilr=2" class="hover:text-pink-500 duration-300">
+                            Grupo WhatsApp
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="usuarios.html" class="hover:text-pink-500 duration-300">
+                            Lista de Usuários
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- MENU HAMBURGUER -->
+            <button
+                id="menu-btn"
+                class="md:hidden text-3xl">
+                <i class="fa-solid fa-bars"></i>
             </button>
-            
-            <div class="mensagem" id="mensagem"></div>
-            <a href="usuarios.html">Usuarios na lista</a>
-        </section>
+
+        </div>
+
+        <!-- MENU MOBILE -->
+        <nav
+            id="mobile-menu"
+            class="hidden md:hidden bg-black/95 border-t border-purple-500">
+
+            <ul class="flex flex-col text-center">
+                <li>
+                    <a href="https://chat.whatsapp.com/KlfXQrE0GpT5ZXaL16P5f2?s=cl&p=i&ilr=2"
+                        class="block py-4 hover:bg-purple-900 duration-300">
+                        Grupo WhatsApp
+                    </a>
+                </li>
+
+                <li>
+                    <a href="usuarios.html"
+                        class="block py-4 hover:bg-purple-900 duration-300">
+                        Lista de Usuários
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="container mx-auto px-6 pt-36 pb-16">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+            <!-- FORMULÁRIO -->
+            <div class="glass p-6 md:p-8 rounded-3xl shadow-2xl">
+
+                <span class="text-pink-500 uppercase tracking-widest">
+                    Evento Exclusivo
+                </span>
+
+                <h1 class="text-4xl md:text-6xl font-bold mt-3 mb-4">
+                    GALAXY 
+                    <span class="text-pink-500">
+                        SHOWS
+                    </span>
+                </h1>
+
+                <p class="text-gray-300 mb-8">
+                    Cadastre seu nome para participar da lista e entre no grupo do whatsApp
+                </p>
+
+                <div class="space-y-5">
+
+                    <div>
+                        <label class="block mb-2 text-gray-300">
+                            Nome do Usuário
+                        </label>
+
+                        <input
+                            type="text"
+                            placeholder="Digite seu nome"
+                            class="w-full p-4 rounded-xl bg-black/30 border border-gray-700 focus:border-pink-500 focus:outline-none"
+                            id="nome"
+                            required>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="w-full bg-gradient-to-r from-pink-500 to-purple-600 p-4 rounded-xl text-lg font-bold hover:scale-105 duration-300"
+                        id="submit-btn"
+                        >
+
+                        Entrar na Lista 
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- VIDEO -->
+            <div class="overflow-hidden rounded-3xl border border-purple-500 shadow-2xl">
+
+                <video
+                    autoplay
+                    loop
+                    playsinline
+                    class="w-full h-[300px] md:h-[550px] object-cover">
+
+                    <!-- Troque pelo seu vídeo -->
+                    <source src="src/img/WhatsApp Video 2026-06-02 at 10.45.04.mp4" type="video/mp4">
+
+                </video>
+
+            </div>
+
+        </div>
+
     </main>
-    
+
+    <!-- FOOTER -->
+    <footer class="glass mt-10">
+        <div class="container mx-auto px-6 py-10 text-center">
+
+            <h2 class="text-2xl font-bold mb-4">
+                Redes do Promoter
+            </h2>
+
+            <p class="text-gray-400 mb-6">
+                Siga nossas redes sociais para acompanhar as próximas festas. whatsApp para colocar nome na lista também
+            </p>
+
+            <div class="flex justify-center gap-8 text-4xl">
+
+                <a href="https://www.instagram.com/gleison_schlemper?igsh=MTB1d2VhaHJyNTFqeg%3D%3D&utm_source=qr"
+                    class="hover:text-pink-500 duration-300">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://w.app/dfvbdu"
+                    class="hover:text-green-500 duration-300">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+
+            <div class="mt-8 text-gray-500">
+                © 2026 VLG_GS Night Party - Todos os direitos reservados.
+            </div>
+
+        </div>
+    </footer>
+      
+    <script src="src/script/index.js"></script>
     <script src="src/supabase/db.js"></script>
-    <script src="src/script/script.js"></script>
 </body>
 </html>

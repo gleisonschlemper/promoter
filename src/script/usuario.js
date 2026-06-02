@@ -4,23 +4,26 @@ async function carregarUsuarios() {
             console.log("Erro:", error);
             return;
         }
-
+        console.log("Dados:", data);
         exibirUsuarios(data);
 }
 
 function exibirUsuarios(usuarios) {
     const tabela = document.querySelector("table tbody");
-    tabela.innerHTML = "";  
+    tabela.innerHTML = "";
 
     usuarios.forEach(usuario => {
         const linha = document.createElement("tr");
-        linha.innerHTML = `  
-            <td>${usuario.id}</td>              
-            <td>${usuario.nome}</td>
+
+        linha.className = "hover:bg-slate-700 transition";
+
+        linha.innerHTML = `
+            <td class="px-6 py-4 text-slate-300 text-center ">${usuario.id}</td>
+            <td class="px-6 py-4 text-white text-center ">${usuario.nome}</td>
         `;
-        
+
         tabela.appendChild(linha);
     });
-}   
+}
 
 carregarUsuarios()
