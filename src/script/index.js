@@ -15,7 +15,7 @@ document.getElementById("submit-btn").addEventListener("click", async (e) => {
     }
     else {
         const { data, error } = await db
-            .from('pessoas')
+            .from('usuarios')
             .insert([
                 { nome: nome }
             ]);
@@ -26,6 +26,7 @@ document.getElementById("submit-btn").addEventListener("click", async (e) => {
         } else {
             document.getElementById("nome").value = "";
             alert("Usuário salvo com sucesso!");
+            window.location.href = "usuarios.html";
         }
     }
     

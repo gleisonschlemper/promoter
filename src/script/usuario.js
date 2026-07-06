@@ -1,5 +1,5 @@
 async function carregarUsuarios() {
-    const { data, error } = await db.from('pessoas').select('*');
+    const { data, error } = await db.from('usuarios').select('*');
         if (error) {
             console.log("Erro:", error);
             return;
